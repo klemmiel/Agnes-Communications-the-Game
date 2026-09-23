@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class End1 : MonoBehaviour
+{
+    public GameObject LoseScreen;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            LoseScreen.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
+}
+
